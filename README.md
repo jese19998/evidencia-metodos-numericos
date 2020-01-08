@@ -89,6 +89,69 @@ def sign_of_a(a):
        return sign 
 a = 1.5
  print(’a is ’ + sign_of_a(a))
-                                             Sistema  de ecuaciones algebraicas lineales 
+                                             Sistema  de ecuaciones algebraicas lineales Objetivo: Resolver ecuaciones simultaneas Ax=b
+En este tema procedemos a la solución de N ecuaciones algebraicas lineales con N variables desconocidas. Es un tema muy importante ya que casi es imposible realizar análisis numéricos sin encontrar ecuaciones simultáneas. Además, los conjuntos de ecuaciones de problemas de ingeniería son de forma típica muy grandes y consumen demasiados recursos computacionales. Hay muchos algoritmos dedicados a la solución de grandes conjuntos de ecuaciones, cada uno diseña una forma particular una matriz de coeficientes.
+El método qu
+#Equipo Jese Manuel Acosta Avila y Gabriela Ramirez Cortez
+#13/09/2019
+#Ejercicio 1
+
+from numpy import*
+
+print(arange(1,101,2))
+iniciando el ejercicio 1 en adelante se mostrarán  algunos ejemplos  que se vió en clase  de la materia "metodos numericos"
+##Equipo Jese Manuel Acosta Avila y Gabriela Ramirez Cortez
+#13/09/2019
+#Ejercicio 2
+
+from numpy import array
+
+a=array([[1.44, -0.36, 5.52, 0.00], [-0.36, 10.33, -7.78, 0.00], [5.52, -7.78, 28.40, 9.00], [0.00, 0.00, 9.00, 61.00]])
+print(a)
+
+b=array([[0.04], [-2.15], [0], [0.88]])
+print(b)
+
+
+#Equipo Jese Manuel Acosta Avila y Gabriela Ramirez Cortez
+#20/09/2019
+#Ejercicio 3: Determinar que la matriz A es singular
+
+import numpy as np
+A = np.array([[2.1,-0.6,1.1],[3.2,4.7,-0.8],[3.1,-6.5,4.1]])
+detA = np.linalg.det(A)
+print('La determinante de A es: %.2f'%detA )
+
+#Equipo Jese Manuel Acosta Avila y Gabriela Ramirez Cortez
+#20/09/2019
+#Ejercicio 4: Realizar un programaen el que el usuario introdusaca los 9 elementos de una matriz 3*3 y que el programa le debuelva al usuario si la matriz que inserto es singular o no.
+
+import numpy as np
+print('Introduce los 9 datos de tu matriz: ')
+a11 = float(input('a11= '))
+a12 = float(input('a12= '))
+a13 = float(input('a13= '))
+a21 = float(input('a21= '))
+a22 = float(input('a22= '))
+a23 = float(input('a23= '))
+a31 = float(input('a31= '))
+a32 = float(input('a32= '))
+a33 = float(input('a33= '))
+
+A = np.array([[a11,a12,a13],[a21,a22,a23],[a31,a32,a33]])
+detA = np.linalg.det(A)
+if np.round(detA,0) == 0.0:
+    print('La matriz A es singular')
+else: 
+    print('la matriz A no es singular, es: %.2f' %detA )
+
+
+
+
+
+
+
+
+
                                              
                               
